@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reveal/css/reveal.css">
+    <link rel="stylesheet" href="../reveal/css/theme/beige.css">
+    <link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>react native</h1>
+            </section>
+            <section>
+                <div class="header">
+                    <h2>Long long time ago</h2>
+                    <h3 class="fragment">In a galaxy far, far away...</h3>
+                </div>
+                <table class="fragment">
+                    <tr>
+                        <td>
+                            <img height="120" src="./assets/nokia.jpg" />
+                            <span style="vertical-align: 120%"> S60 SDK (Java)</span>
+                        </td>
+                        <td>
+                            <img height="120" src="./assets/blackberry.png" />
+                            <span style="vertical-align: 120%"> BBOS SDK (Java)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center">
+                            <img height="120" src="./assets/ericson.png" />
+                            <span style="vertical-align: 120%"> Ericsson SDK (Java)</span>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <section>
+                <h2>but then...</h2>
+                <img src="assets/terminator.gif" />
+            </section>
+            <section>
+                <h3>and from the ashes a smartphone will rise</h3>
+                <p class="fragment">A new era begun...</p>
+                <table class="fragment">
+                    <tr>
+                        <td>
+                            <img height="120" src="./assets/iphone.png" />
+                        </td>
+                        <td>
+                            <img height="120" src="./assets/android.png" />
+                        </td>
+                    </tr>
+                    <tr class="fragment">
+                        <td colspan="2" style="text-align: center">
+                            <p>And yes,</p>
+                            <img height="120" src="./assets/windows.png" />
+                            <p>This one as well</p>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <section>
+                <h3>Modern development stack for mobile</h3>
+                <ul>
+                    <li>Java (Android)</li>
+                    <li>ObjectiveC (iOS)</li>
+                    <li>C# (Windows Phone)</li>
+                    <li>--------------------------------</li>
+                    <li>Simulators</li>
+                    <li>Development machine Architectures</li>
+                    <li>Stores</li>
+                </ul>
+            </section>
+            <section>
+                <h3>At this point cross platform development means</h3>
+                <div>
+                    <img src="assets/teams.png" />
+                    <p>Team for every platform</p>
+                </div>
+            </section>
+            <section>
+                <h3>First attemps were divided into</h3>
+                <table>
+                    <tr>
+                        <th>Hybrid</th>
+                        <th>Native Cross Platform</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Phonegap</p>
+                        </td>
+                        <td>Titanium (JS)</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Ionic</p>
+                        </td>
+                        <td>
+                            <p>Xamarin (C#)</p>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <section>
+                <h3>Hybrid apps (phonegap)</h3>
+                <img src="assets/phonegap.jpg" />
+            </section>
+            <section>
+                <h3>Native Cross Platform apps</h3>
+                <img src="assets/titanium.png" />
+            </section>
+            <section>
+                <h3>Meanwhile, in a distant place...</h3>
+                <div class="fragment">
+                    <img width=" 750 " src="assets/dragons.jpg " />
+                    <span class="angular ">Angular</span>
+                    <span class="react ">React</span>
+                    <span class="vue ">Vue</span>
+                </div>
+                <small class="backbone fragment ">Backbone</small>
+            </section>
+            <section>
+                <h3>React Architecture</h3>
+                <img src="assets/react.jpeg" />
+            </section>
+            <section>
+                    <h3>React Native</h3>
+                    <img src="assets/react-website.png"/>
+                    <p><a href="https://facebook.github.io/react-native/">https://facebook.github.io/react-native/</a></p>
+                </section>
+            <section>
+                <h3>React native architecture</h3>
+                <img height="530" src="assets/react-native.jpg" />
+            </section>
+            <section>
+                <h3>So what do you need to start</h3>
+                <small>Install react native</small>
+                <pre>
+                    <code data-trim data-noescape class="ts">
+                        yarn install -g create-react-native-app
+                    </code>
+                </pre>
+                <small>Generate new app</small>
+                <pre>
+                    <code data-trim data-noescape class="bash">
+                        create-react-native-app AwesomeProject
+
+                        cd AwesomeProject
+                        npm start
+                    </code>
+                </pre>
+            </section>
+            <section>
+                
+            </section>
+        </div>
+    </div>
+
+    <script src="../reveal/lib/js/classList.js "></script>
+    <script src="../reveal/lib/js/head.min.js "></script>
+    <script src="../reveal/js/reveal.js "></script>
+    <script>
+        window.onload = () => {
+            Reveal.initialize({
+                history: true,
+                dependencies: [
+                    { src: '../reveal/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                    { src: '../reveal/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                    { src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                ]
+            });
+        }
+
+    </script>
+</body>
+
+</html>

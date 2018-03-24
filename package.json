@@ -1,0 +1,14 @@
+{
+  "name": "revealjs-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:dimkinv/revealjs-template.git",
+  "author": "Danny Vernovsky <dvernovsky@interwise.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "simple-autoreload-server": "^0.2.7"
+  },
+  "scripts": {
+    "start": "autoreload-server"
+  }
+}

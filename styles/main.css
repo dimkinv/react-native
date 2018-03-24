@@ -1,0 +1,39 @@
+.header {
+    perspective: 123px;
+}
+
+.header>h3 {
+    transform: rotateX(30deg);
+}
+
+.angular {
+    position: absolute;
+    left: 110px;
+    top: 178px;
+    font-weight: bold !important;
+    color: darkblue;
+}
+
+.vue{
+    position: absolute;
+    left: 460px;
+    top: 538px;
+    font-weight: bold !important;
+    color: darkblue;
+}
+
+.react{
+    position: absolute;
+    left: 750px;
+    top: 202px;
+    font-weight: bold !important;
+    color: darkblue;
+}
+
+.backbone{
+    position: absolute;
+    left: 739px;
+    top: 522px;
+    font-weight: bold !important;
+    color: darkblue;
+}
