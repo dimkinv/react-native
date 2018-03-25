@@ -133,10 +133,12 @@
                 <img src="assets/react.jpeg" />
             </section>
             <section>
-                    <h3>React Native</h3>
-                    <img src="assets/react-website.png"/>
-                    <p><a href="https://facebook.github.io/react-native/">https://facebook.github.io/react-native/</a></p>
-                </section>
+                <h3>React Native</h3>
+                <img src="assets/react-website.png" />
+                <p>
+                    <a href="https://facebook.github.io/react-native/">https://facebook.github.io/react-native/</a>
+                </p>
+            </section>
             <section>
                 <h3>React native architecture</h3>
                 <img height="530" src="assets/react-native.jpg" />
@@ -161,7 +163,7 @@
             </section>
             <section>
                 <h3>So how does react work anyway?</h3>
-                It all starts with render                
+                It all starts with render
                 <pre>
                     <code data-trim data-noescape class="ts">
                         ReactDOM.render(
@@ -194,7 +196,7 @@
             <section>
                 <h3>props and state</h3>
                 <small>Parent</small>
-                 <pre class="vert-mn-0">
+                <pre class="vert-mn-0 slim-code">
                     <code data-trim data-noescape class="ts">
                         class Welcome extends React.Component {
                             render() {
@@ -207,11 +209,14 @@
                     </code>
                 </pre>
                 <small>child</small>
-                <pre class="vert-mn-0">
+                <pre class="vert-mn-0 slim-code">
                     <code data-trim data-noescape class="ts">
                         class Message extends React.Component&lt;MessageProps&gt; {
+                            componentWillReceiveProps(newProps:&lt;MessageProps&gt;){
+                                this.setState({props})
+                            }
                             render() {
-                                return &lt;h1&gt;Hello, {this.props.content} &lt;/h1&gt;;
+                                return &lt;h1&gt;Hello, {this.state.content} &lt;/h1&gt;;
                             }
                         }
                     </code>
@@ -220,6 +225,33 @@
             <section>
                 <img src="assets/demotime.png" alt="">
             </section>
+            <section>
+                <h3>So whats next?</h3>
+                <table>
+                    <tr>
+                        <td>
+                            <p>Angular Nativescript</p>
+                            <img src="assets/native-script.png" />
+                        </td>
+                        <td>
+                            <p>React Native</p>
+                            <img height="265" src="assets/react-native-post.jpg" />
+                        </td>
+                    </tr>
+                </table>
+                <img class="fight" width="300" src="assets/fight.png" alt="">
+            </section>
+            <section>
+                <div>
+                    <img width=" 750 " src="assets/dragons.jpg " />
+                    <span class="angular ">Angular</span>
+                    <span class="react ">React</span>
+                    <span class="vue ">Vue</span>
+                </div>
+            </section>
+            <section>
+                <h1>Thank you</h1>
+            </section>
         </div>
     </div>
 
@@ -227,14 +259,14 @@
     <script src="../reveal/lib/js/head.min.js "></script>
     <script src="../reveal/js/reveal.js "></script>
     <script>
-            Reveal.initialize({
-                history: true,
-                dependencies: [
-                    { src: '../reveal/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-                    { src: '../reveal/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-                    { src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
-                ]
-            });
+        Reveal.initialize({
+            history: true,
+            dependencies: [
+                { src: '../reveal/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: '../reveal/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+                { src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+            ]
+        });
 
     </script>
 </body>

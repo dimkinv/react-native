@@ -15,7 +15,8 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "node node_modules/jest/bin/jest.js"
+    "test": "node node_modules/jest/bin/jest.js",
+    "bundle": "react-native bundle --dev false --platform android --entry-file App.js --bundle-output ./intermediates/index.android.bundle --assets-dest ./intermediates/debug"
   },
   "jest": {
     "preset": "jest-expo"

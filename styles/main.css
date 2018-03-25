@@ -59,3 +59,18 @@ code.inline {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
 }
+
+.slim-code{
+    font-size: 15px !important;
+    line-height: 21px !important;
+}
+
+.fight{
+    position: absolute;
+    border: none !important;
+    box-shadow: none !important;
+    left: 424px;
+    background: none !important;
+    top: 280px;
+    transform: rotateZ(-30deg);
+}

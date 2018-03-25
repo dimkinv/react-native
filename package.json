@@ -9,6 +9,6 @@
     "simple-autoreload-server": "^0.2.7"
   },
   "scripts": {
-    "start": "autoreload-server"
+    "start": "autoreload-server"  
   }
 }

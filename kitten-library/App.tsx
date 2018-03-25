@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, ImageBackground, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground, ScrollView, FlatList } from 'react-native';
 
 import Cat from './components/cat';
 export default class App extends React.Component {
@@ -9,63 +9,62 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <Text style={styles.header}>Kitten Library</Text>
         <ImageBackground style={styles.container} source={require('./assets/main-screen-logo.jpg')} imageStyle={{ opacity: 0.2 }}>
-          <ScrollView contentContainerStyle={styles.contentContainer}>
-            {catsSources.map((source, i) => (
-              <View style={styles.viewItem} key={i}>
-                <Cat source={source} />
-              </View>))}
-          </ScrollView>
-        </ImageBackground>
+          <FlatList
+            data={catsSources}
+            renderItem={({ item }) => <Cat source={item} />}
+            keyExtractor={keyExtractor}
+          />
+          </ ImageBackground >
       </View>
-    );
-  }
-  
-}
-
+        );
+      }
+    
+    }
+    
+    const keyExtractor = () => Math.random().toString();
 const styles = StyleSheet.create({
-  container: {
-    display: 'flex',
-    flex: 1,
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '100%',
-    paddingTop: 30
-  },
+          container: {
+          display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '100%',
+        paddingTop: 30
+      },
   header: {
-    fontSize: 30,
-    fontWeight: 'bold'
-  },
-
+          fontSize: 30,
+        fontWeight: 'bold'
+      },
+    
   contentContainer: {
-    paddingVertical: 20,
-  },
-
+          paddingVertical: 20,
+      },
+    
   viewItem: {
-    padding: 10,
-    width: 200,
-    height: 200
-  },
-
-});
-
-const catsSources = [
-  require("./assets/images/a1.jpg"),
-  require("./assets/images/a2.jpg"),
-  require("./assets/images/a3.jpg"),
-  require("./assets/images/a4.jpg"),
-  require("./assets/images/a5.jpg"),
-  require("./assets/images/a6.jpg"),
-  require("./assets/images/a7.jpg"),
-  require("./assets/images/a8.jpg"),
-  require("./assets/images/a9.jpg"),
-  require("./assets/images/a10.jpg"),
-  require("./assets/images/a11.jpg"),
-  require("./assets/images/a12.jpg"),
-  require("./assets/images/a13.jpg"),
-  require("./assets/images/a14.jpg"),
-  require("./assets/images/a15.jpg"),
-  require("./assets/images/a16.jpg"),
-  require("./assets/images/a17.jpg"),
-  require("./assets/images/a18.jpg")
-]
+          padding: 10,
+        width: 200,
+        height: 200
+      },
+    
+    });
+    
+    const catsSources = [
+      require("./assets/images/a1-min.jpg"),
+      require("./assets/images/a2-min.jpg"),
+      require("./assets/images/a3-min.jpg"),
+      require("./assets/images/a4-min.jpg"),
+      require("./assets/images/a5-min.jpg"),
+      require("./assets/images/a6-min.jpg"),
+      require("./assets/images/a7-min.jpg"),
+      require("./assets/images/a8-min.jpg"),
+      require("./assets/images/a9-min.jpg"),
+      require("./assets/images/a10-min.jpg"),
+      require("./assets/images/a11-min.jpg"),
+      require("./assets/images/a12-min.jpg"),
+      require("./assets/images/a13-min.jpg"),
+      require("./assets/images/a14-min.jpg"),
+      require("./assets/images/a15-min.jpg"),
+      require("./assets/images/a16-min.jpg"),
+      require("./assets/images/a17-min.jpg"),
+      require("./assets/images/a18-min.jpg")
+    ]

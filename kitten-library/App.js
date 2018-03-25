@@ -1,20 +1,18 @@
-"use strict";
 import * as React from 'react';
-import { StyleSheet, Text, View, ImageBackground, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground, FlatList } from 'react-native';
 import Cat from './components/cat';
 export default class App extends React.Component {
     render() {
         return (React.createElement(View, { style: styles.container },
             React.createElement(Text, { style: styles.header }, "Kitten Library"),
             React.createElement(ImageBackground, { style: styles.container, source: require('./assets/main-screen-logo.jpg'), imageStyle: { opacity: 0.2 } },
-                React.createElement(ScrollView, { contentContainerStyle: styles.contentContainer }, catsUrls.map((url, i) => (React.createElement(View, { style: styles.viewItem, key: i },
-                    React.createElement(Cat, { url: url }))))))));
+                React.createElement(FlatList, { data: catsSources, renderItem: ({ item }) => React.createElement(Cat, { source: item }), keyExtractor: keyExtractor }))));
     }
 }
+const keyExtractor = () => Math.random().toString();
 const styles = StyleSheet.create({
     container: {
         display: 'flex',
-        flex: 1,
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
@@ -34,23 +32,23 @@ const styles = StyleSheet.create({
         height: 200
     },
 });
-const catsUrls = [
-    require("./assets/images/a1.jpg"),
-    require("./assets/images/a2.jpg"),
-    require("./assets/images/a3.jpg"),
-    require("./assets/images/a4.jpg"),
-    require("./assets/images/a5.jpg"),
-    require("./assets/images/a6.jpg"),
-    require("./assets/images/a7.jpg"),
-    require("./assets/images/a8.jpg"),
-    require("./assets/images/a9.jpg"),
-    require("./assets/images/a10.jpg"),
-    require("./assets/images/a11.jpg"),
-    require("./assets/images/a12.jpg"),
-    require("./assets/images/a13.jpg"),
-    require("./assets/images/a14.jpg"),
-    require("./assets/images/a15.jpg"),
-    require("./assets/images/a16.jpg"),
-    require("./assets/images/a17.jpg"),
-    require("./assets/images/a18.jpg")
+const catsSources = [
+    require("./assets/images/a1-min.jpg"),
+    require("./assets/images/a2-min.jpg"),
+    require("./assets/images/a3-min.jpg"),
+    require("./assets/images/a4-min.jpg"),
+    require("./assets/images/a5-min.jpg"),
+    require("./assets/images/a6-min.jpg"),
+    require("./assets/images/a7-min.jpg"),
+    require("./assets/images/a8-min.jpg"),
+    require("./assets/images/a9-min.jpg"),
+    require("./assets/images/a10-min.jpg"),
+    require("./assets/images/a11-min.jpg"),
+    require("./assets/images/a12-min.jpg"),
+    require("./assets/images/a13-min.jpg"),
+    require("./assets/images/a14-min.jpg"),
+    require("./assets/images/a15-min.jpg"),
+    require("./assets/images/a16-min.jpg"),
+    require("./assets/images/a17-min.jpg"),
+    require("./assets/images/a18-min.jpg")
 ];
