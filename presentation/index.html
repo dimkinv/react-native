@@ -70,10 +70,11 @@
             <section>
                 <h3>Modern development stack for mobile</h3>
                 <ul>
-                    <li>Java (Android)</li>
-                    <li>ObjectiveC (iOS)</li>
-                    <li>C# (Windows Phone)</li>
+                    <li>Java/Kotlin (Android)</li>
+                    <li>ObjectiveC/Swift (iOS)</li>
+                    <li>C#/Javascript (Windows Phone)</li>
                     <li>--------------------------------</li>
+                    <li>IDEs</li>
                     <li>Simulators</li>
                     <li>Development machine Architectures</li>
                     <li>Stores</li>
@@ -144,8 +145,8 @@
                 <h3>So what do you need to start</h3>
                 <small>Install react native</small>
                 <pre>
-                    <code data-trim data-noescape class="ts">
-                        yarn install -g create-react-native-app
+                    <code data-trim data-noescape class="bash">
+                        yarn global add create-react-native-app
                     </code>
                 </pre>
                 <small>Generate new app</small>
@@ -159,7 +160,65 @@
                 </pre>
             </section>
             <section>
-                
+                <h3>So how does react work anyway?</h3>
+                It all starts with render                
+                <pre>
+                    <code data-trim data-noescape class="ts">
+                        ReactDOM.render(
+                            &lt;h1&gt;Hello, world!&lt;/h1&gt;,
+                            document.getElementById('root')
+                        );  
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>jsx/tsx files</h3>
+                <small>React embraces the fact that rendering logic is inherently coupled with other UI logic</small>
+                <small>Code and UI are together in purpose</small>
+                <pre>
+                    <code data-trim data-noescape class="ts">
+                        class Welcome extends React.Component {
+                            render() {
+                                return &lt;h1&gt;Hello, {this.props.name} &lt;/h1&gt;;
+                            }
+                            componentWillMount(){
+                                // called before component will be placed on DOM
+                            }
+                            componentDidMount(){
+                                // caleed after component is placed on DOM
+                            }
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>props and state</h3>
+                <small>Parent</small>
+                 <pre class="vert-mn-0">
+                    <code data-trim data-noescape class="ts">
+                        class Welcome extends React.Component {
+                            render() {
+                                return (
+                                    &lt;h1&gt;Hello, {this.props.name} &lt;/h1&gt;;
+                                    &lt;Message content={"Some awesome message"} /&gt;
+                                )
+                            }
+                        }
+                    </code>
+                </pre>
+                <small>child</small>
+                <pre class="vert-mn-0">
+                    <code data-trim data-noescape class="ts">
+                        class Message extends React.Component&lt;MessageProps&gt; {
+                            render() {
+                                return &lt;h1&gt;Hello, {this.props.content} &lt;/h1&gt;;
+                            }
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <img src="assets/demotime.png" alt="">
             </section>
         </div>
     </div>
@@ -168,7 +227,6 @@
     <script src="../reveal/lib/js/head.min.js "></script>
     <script src="../reveal/js/reveal.js "></script>
     <script>
-        window.onload = () => {
             Reveal.initialize({
                 history: true,
                 dependencies: [
@@ -177,7 +235,6 @@
                     { src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
                 ]
             });
-        }
 
     </script>
 </body>

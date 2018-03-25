@@ -37,3 +37,25 @@
     font-weight: bold !important;
     color: darkblue;
 }
+
+pre {
+    box-shadow: none !important;
+}
+
+pre.wide {
+    width: 100%;
+}
+
+code {
+    max-height: none !important;
+}
+
+code.inline {
+    background: #eee;
+    padding: 0px 4px 2px 3px;
+}
+
+.vert-mn-0{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
